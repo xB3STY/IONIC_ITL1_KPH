@@ -1,33 +1,86 @@
+<!-- Root container of the Ionic application -->
 <ion-app>
+
+  <!-- Split pane layout:
+       shows the side menu permanently on large screens
+       and as a slide-out menu on mobile devices -->
   <ion-split-pane contentId="main-content">
+
+    <!-- Side menu definition -->
     <ion-menu contentId="main-content" type="overlay">
+
+      <!-- Menu content area -->
       <ion-content>
+
+        <!-- Main navigation list -->
         <ion-list id="inbox-list">
+
+          <!-- Menu header -->
           <ion-list-header>Inbox</ion-list-header>
+
+          <!-- Example user info -->
           <ion-note>hi&#64;ionicframework.com</ion-note>
 
+          <!-- Loop over menu pages defined in app.component.ts
+               Uses the new Angular @for syntax -->
           @for (p of appPages; track p; let i = $index) {
+
+            <!-- Menu item wrapper -->
             <ion-menu-toggle auto-hide="false">
-              <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-                <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+
+              <!-- Navigation item:
+                   routerLink navigates to the selected page -->
+              <ion-item
+                routerDirection="root"
+                [routerLink]="[p.url]"
+                lines="none"
+                detail="false"
+                routerLinkActive="selected">
+
+                <!-- Platform-specific icon (iOS / Material Design) -->
+                <ion-icon
+                  aria-hidden="true"
+                  slot="start"
+                  [ios]="p.icon + '-outline'"
+                  [md]="p.icon + '-sharp'">
+                </ion-icon>
+
+                <!-- Menu label -->
                 <ion-label>{{ p.title }}</ion-label>
+
               </ion-item>
             </ion-menu-toggle>
           }
         </ion-list>
 
+        <!-- Secondary list (static labels) -->
         <ion-list id="labels-list">
+
+          <!-- Section header -->
           <ion-list-header>Labels</ion-list-header>
 
+          <!-- Loop over static labels -->
           @for (label of labels; track label) {
+
             <ion-item lines="none">
-              <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+              <ion-icon
+                aria-hidden="true"
+                slot="start"
+                ios="bookmark-outline"
+                md="bookmark-sharp">
+              </ion-icon>
+
               <ion-label>{{ label }}</ion-label>
             </ion-item>
           }
         </ion-list>
+
       </ion-content>
     </ion-menu>
+
+    <!-- Main content area:
+         pages are rendered here via Angular routing -->
     <ion-router-outlet id="main-content"></ion-router-outlet>
+
   </ion-split-pane>
 </ion-app>

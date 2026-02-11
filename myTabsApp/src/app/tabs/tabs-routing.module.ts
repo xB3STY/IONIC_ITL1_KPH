@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-
+//
 // Routing configuration for the tabs navigation
 // Each tab has its own child route
 

@@ -1,4 +1,4 @@
-# IONIC_ITL1
+# IONIC_ITL1 - Asumadu Basty
 
 ## 1. Aufgabenstellung: Start einer Demo App (z. B. tabs oder sidemenu)
 ---

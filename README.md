@@ -45,4 +45,9 @@
 ## 3. Aufgabenstellung: Teil 2: Backend Routinen
 <img width="1260" height="350" alt="image" src="https://github.com/user-attachments/assets/2e65a829-2c9a-43de-8240-61f64b73c3a0" />
 
+## 4. IONIC Frontend
+<img width="3164" height="1962" alt="image" src="https://github.com/user-attachments/assets/093c573d-8753-407b-baa9-ffb6773f155b" />
+<img width="3164" height="1962" alt="image" src="https://github.com/user-attachments/assets/3d0ca54f-68dc-4ff6-83c5-619ee3a5370a" />
+
+<img width="794" height="484" alt="image" src="https://github.com/user-attachments/assets/3dff9062-33ed-42cf-b98c-e3166e4d2733" />
 

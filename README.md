@@ -51,3 +51,11 @@
 
 <img width="794" height="484" alt="image" src="https://github.com/user-attachments/assets/3dff9062-33ed-42cf-b98c-e3166e4d2733" />
 
+## 5. IONIC Login Implementierung
+<img width="3164" height="1954" alt="image" src="https://github.com/user-attachments/assets/49301284-2841-4628-b878-753fdf671577" />
+<img width="3164" height="1954" alt="image" src="https://github.com/user-attachments/assets/08a840ea-02ee-4f4d-8b56-e7af48a9b637" />
+<img width="3164" height="1954" alt="image" src="https://github.com/user-attachments/assets/38e7e02c-4cfe-4e76-b4a4-b3c8987e47b4" />
+
+
+
+

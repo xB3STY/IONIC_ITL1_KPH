@@ -16,8 +16,10 @@ export class OrdersPage implements OnInit {
   constructor(private ordersService: OrdersService) {}
 
   ngOnInit() {
+    // load orders from backend when page opens
     this.ordersService.getOrders().subscribe((data: any) => {
       console.log('Orders:', data);
+      // store orders so they can be shown in the page
       this.orders = data;
     });
   }

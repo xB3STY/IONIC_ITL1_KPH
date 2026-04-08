@@ -16,9 +16,11 @@ export class LoginPage {
   constructor(private auth: AuthService, private router: Router) {}
 
   login() {
+    // try login with entered username and password
     this.auth.login(this.username, this.password).subscribe(async (res: any) => {
       console.log('Login response:', res);
 
+      // if login is valid, store data and go to app
       if (res.success) {
         this.auth.saveToken(res.token);
         this.auth.saveUser(res.user);
@@ -31,6 +33,7 @@ export class LoginPage {
 
         this.router.navigateByUrl('/tabs/tab1');
       } else {
+        // show error if login failed
         this.message = 'Login failed';
 
         await Toast.show({

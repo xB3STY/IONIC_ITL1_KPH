@@ -29,7 +29,7 @@ export class LoginPage {
           text: 'Login successful'
         });
 
-        this.router.navigateByUrl('/profile');
+        this.router.navigateByUrl('/tabs/tab1');
       } else {
         this.message = 'Login failed';
 

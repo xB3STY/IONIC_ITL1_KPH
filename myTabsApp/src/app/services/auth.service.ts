@@ -1,29 +1,45 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Preferences } from '@capacitor/preferences';
-
-const TOKEN_KEY = 'my-token';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  API = 'http://localhost:8101';
+  private API_URL = 'http://localhost:8101';
 
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string) {
-    return this.http.post(`${this.API}/login`, {
+    return this.http.post(`${this.API_URL}/login`, {
       username,
       password
     });
   }
 
-  async saveToken(token: string) {
-    await Preferences.set({
-      key: TOKEN_KEY,
-      value: token
-    });
+  saveToken(token: string) {
+    localStorage.setItem('token', token);
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
+  }
+
+  saveUser(user: any) {
+    localStorage.setItem('user', JSON.stringify(user));
+  }
+
+  getUser() {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+  }
+
+  isLoggedIn() {
+    return !!this.getToken();
   }
 }

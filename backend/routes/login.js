@@ -1,28 +1,27 @@
 const express = require('express');
 const router = express.Router();
 
-// POST /login
-router.post('/', (req, res) => {
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
 
-    const username = req.body.username;
-    const password = req.body.password;
+    if (username === 'test' && password === '1234') {
+        const token = 'my-secret-token';
 
-    if (username === "admin" && password === "1234") {
-
-        res.json({
+        return res.json({
             success: true,
-            message: "Login successful"
+            token: token,
+            user: {
+                username: 'test',
+                name: 'Test User',
+                email: 'test@example.com',
+                role: 'Student'
+            }
         });
-
-    } else {
-
-        res.json({
-            success: false,
-            message: "Invalid credentials"
-        });
-
     }
 
+    res.json({
+        success: false
+    });
 });
 
 module.exports = router;

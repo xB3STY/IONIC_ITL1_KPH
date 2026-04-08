@@ -26,7 +26,7 @@ app.use(session({
 }));
 
 // Login Route
-app.use('/login', loginRouter);
+app.use('/', loginRouter);
 
 
 // Health check
@@ -35,13 +35,10 @@ app.get('/health', (req, res) => res.json({ ok: true }));
 
 // Read orders
 app.get('/orders', async (req, res) => {
-    try {
-        const orders = await db.Order.findAll({ order: [['id', 'DESC']] });
-        res.json(orders);
-    } catch (e) {
-        console.error('Orders error:', e);
-        res.status(500).json({ error: 'Failed to fetch orders' });
-    }
+    res.json([
+        { id: 1, name: 'Test Order 1' },
+        { id: 2, name: 'Test Order 2' }
+    ]);
 });
 
 const PORT = 8101;

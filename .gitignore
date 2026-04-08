@@ -4,12 +4,9 @@
 *.tmp
 *.tmp.*
 .tmp/
-UserInterfaceState.xcuserstate
-$RECYCLE.BIN/
 
 # Logs
 *.log
-log.txt
 npm-debug.log
 yarn-error.log
 
@@ -37,13 +34,6 @@ plugins/
 # IDEs / Editors
 .idea/
 .vscode/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-project
-*.sublime-workspace
 
 # Misc
 .sass-cache/
@@ -54,3 +44,4 @@ typings/
 # System
 .DS_Store
 Thumbs.db
+

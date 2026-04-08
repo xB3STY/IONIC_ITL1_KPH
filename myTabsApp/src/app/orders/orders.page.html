@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Aufträge</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let o of orders">
+      <ion-label>
+        <h2>{{ o.title }}</h2>
+        <p>Status: {{ o.status }} · Preis: {{ o.price }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
